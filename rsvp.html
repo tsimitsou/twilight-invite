@@ -12,8 +12,7 @@
 
 <body class="white-bg">
 
-    <h1 class="metal-mania-regular details-title">Birthday Party Details</h1>
-
+    
     <div class="metal-mania-regular details-box">
         <p>Date: <strong>This Friday on the 28th </strong></p>
         <p>Door Opens: <strong>20:00 PM</strong></p>
@@ -23,16 +22,56 @@
 
     <h2 class="metal-mania-regular details-sub">Will you attend?<br>(pick a carlisle)</h2>
 
+<!-- Add name input -->
+<div style="text-align: center; margin: 30px auto;">
+    <input type="text" id="guestName" placeholder="Enter your name first" 
+           class="name-input">
+</div>
+
 <div class="rsvp-options">
-    <button class="yes-image" onclick="location.href='yes.html'">
+    <button class="yes-image" onclick="submitRSVP('yes')">
         <img src="carlisle_alive.png" alt="yes">
     </button>
 
-    <button class="no-image" onclick="location.href='no.html'">
+    <button class="no-image" onclick="submitRSVP('no')">
         <img src="carlise_dead.png" alt="no">
     </button>
 </div>
 
+<script>
+function submitRSVP(response) {
+    const name = document.getElementById('guestName').value.trim();
+    
+    if (!name) {
+        alert('Please enter your name first! 🦇');
+        return;
+    }
+    
+    // Send to Formspree
+    fetch('https://formspree.io/f/YOUR_FORM_ID_HERE', {
+        method: 'POST',
+        headers: { 
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: name,
+            response: response === 'yes' ? 'YES - Will attend! ✓' : 'NO - Cannot attend ✗',
+            timestamp: new Date().toLocaleString('en-US', { 
+                timeZone: 'Europe/Athens',
+                dateStyle: 'full',
+                timeStyle: 'short'
+            })
+        })
+    }).then(() => {
+        // Go to yes or no page after submitting
+        location.href = response + '.html';
+    }).catch(err => {
+        console.error('Error:', err);
+        // Still go to the page even if submission fails
+        location.href = response + '.html';
+    });
+}
+</script>
 
 
 
