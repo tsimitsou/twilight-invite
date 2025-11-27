@@ -28,11 +28,24 @@
         <source src="Twilight-bellas-lullaby.mp3" type="audio/mpeg">
        
     </audio>
-
+<script>
+    const audio = document.getElementById('bellas-lullaby');
+    
+    // Try to autoplay
+    audio.play().catch(() => {
+        // If blocked, play on any interaction
+        const playAudio = () => {
+            audio.play();
+        };
+        document.body.addEventListener('click', playAudio, { once: true });
+        document.body.addEventListener('touchstart', playAudio, { once: true });
+    });
+</script>
 
   <img src="image2.png" class="bottom-img" alt="Vampire Image">
 
 </body>
 </html>
+
 
 
