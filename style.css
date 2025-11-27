@@ -1,0 +1,235 @@
+.page-body {
+  margin: 0;
+  padding: 40px 20px;
+  text-align: center;
+  font-family: Georgia, serif;
+  background: white;
+  color: black;
+}
+
+.click-text {
+  font-size: 50px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+
+.center-wrapper {
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+
+.main-img {
+  display: block;
+  width: 360px;
+  height: auto;
+  z-index: 1;
+}
+
+.egg-button {
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%);
+  bottom: 40px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.egg-img {
+  width: 100px;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+@media (max-width: 420px) {
+  .main-img { width: 260px; }
+  .egg-img  { width: 90px;  }
+  .egg-button { bottom: 50px; }
+  .bottom-img { width: 220px;}
+}
+
+.black-bg {
+  background: black ;
+  color: white ;
+}
+
+
+.click-text {
+  margin-top: 50px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.invite-text {
+  margin-top: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 40px;
+  padding: 0 20px;
+  text-align: center;
+  max-width: 600px;
+  
+}
+
+.rsvp-button {
+  font-size: 30px;
+  padding: 10px 20px;
+  margin: 40px auto;
+  display: block;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.bottom-img {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 0px;
+  display: block;
+}
+
+.rsvp-options button {
+  font-size: 22px;
+  margin: 20px;
+  padding: 10px 15px;
+}
+.details-title {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.details-box {
+  color: white;
+  max-width: 700px;
+  margin: 40px auto;
+  font-size: 22px;
+  line-height: 1.5;
+  text-align: center;
+}
+.details-sub {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 90px;
+  text-align: center;
+}
+.rsvp-options {
+  margin-top: 40px;
+  text-align: center;
+}
+.metal-mania-regular {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.white-bg {
+  background-color: #220000;
+  color: black;
+}
+.heart-img-button {
+  display: block;
+  margin: 0 auto;        /* center button */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.heart-img-button img {
+  width: 250px;          /* <-- CHANGE SIZE HERE */
+  height: auto;
+  display: block;
+  margin: 0 auto;        /* center image */
+  transition: 0.2s ease;
+}
+
+.heart-img-button:hover img {
+  transform: scale(1.08);   /* cute hover grow */
+}
+
+.yes-image,
+.no-image {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-block;  
+  vertical-align: top;     
+  margin: 20px;
+}
+
+.yes-image img {
+  width: 200px;   
+  height: auto;
+  display: block;
+  transition: 0.2s;
+}
+
+.no-image img {
+  width: 280px;   
+  height: auto;
+  display: block;
+  transition: 0.2s;
+}
+
+.yes-image:hover img,
+.no-image:hover img {
+  transform: scale(1.05);
+}
+
+
+.rsvp-options {
+  text-align: center;
+}
+.they-said-yes {
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.they-said-yes {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;      /* Stacks items vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.they-said-yes img {
+  max-width: 100%;
+  max-height: 60vh;           /* Reduced so text has room */
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin-top: 20px;           /* Spacing between text and image */
+}
+
+.details-sub-sub {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;         /* Centers the text */
+}
+.they-said-no {
+  background-color: #000000;
+  display: flex;
+  flex-direction: column;      /* Stacks items vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
