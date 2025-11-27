@@ -1,6 +1,6 @@
 .page-body {
   margin: 0;
-  padding: 40px 20px;
+  padding: 100px 20px;
   text-align: center;
   font-family: Georgia, serif;
   background: white;
@@ -30,7 +30,7 @@
   position: absolute;
   left: 55%;
   transform: translateX(-50%);
-  bottom: 40px;
+  bottom: 30px;
   border: none;
   background: transparent;
   padding: 0;
@@ -48,9 +48,10 @@
 @media (max-width: 420px) {
   .main-img { width: 260px; }
   .egg-img  { width: 90px;  }
-  .egg-button { bottom: 50px; }
+  .egg-button {bottom: 30px;}
   .bottom-img { width: 220px;}
 }
+
 
 .black-bg {
   background: black ;
@@ -108,19 +109,20 @@
   color: white;
   max-width: 700px;
   margin: 40px auto;
-  font-size: 22px;
+  font-size: 70px;
   line-height: 1.5;
   text-align: center;
+  margin-top: 200px;
 }
 .details-sub {
   color: white;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: bold;
-  margin-top: 90px;
+  margin-top: 200px;
   text-align: center;
 }
 .rsvp-options {
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
 }
 .metal-mania-regular {
@@ -217,9 +219,10 @@
   margin-top: 20px;           /* Spacing between text and image */
 }
 
+
 .details-sub-sub {
   color: white;
-  font-size: 30px;
+  font-size: 80px;
   font-weight: bold;
   text-align: center;         /* Centers the text */
 }
